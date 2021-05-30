@@ -9,7 +9,11 @@ const useGame = () => {
   const [status, setStatus] = useState<GameStatus>(GameStatus.Playing);
 
   const handleCellClick = (clickedIndex: number) => {
-    if (board[clickedIndex] !== '' || status === 'won' || status === 'draw') {
+    if (
+      board[clickedIndex] !== '' ||
+      status === GameStatus.Won ||
+      status === GameStatus.Draw
+    ) {
       return;
     }
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Grid = styled.div`
@@ -13,8 +12,7 @@ const Cell = styled.div`
   width: 100px;
   height: 100px;
   font-family: 'Permanent Marker', cursive;
-  box-shadow: 0 0 0 1px #333333;
-  border: 1px solid #333333;
+  box-shadow: ${({ theme }) => `0 0 0 1px ${theme.background}`};
   cursor: pointer;
   line-height: 100px;
   font-size: 60px;
